@@ -10,6 +10,7 @@ export default defineConfig({
       outDir: "dist/types",
       // package.json の types フィールドを自動更新したいなら true
       insertTypesEntry: false,
+      exclude: ["**/*.stories.tsx", "**/*.stories.ts"],
     }),
   ],
   build: {

@@ -9,12 +9,12 @@ var T = { exports: {} }, R = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var I;
+var $;
 function re() {
-  if (I) return R;
-  I = 1;
-  var c = Symbol.for("react.transitional.element"), d = Symbol.for("react.fragment");
-  function i(f, a, s) {
+  if ($) return R;
+  $ = 1;
+  var c = Symbol.for("react.transitional.element"), f = Symbol.for("react.fragment");
+  function i(m, a, s) {
     var E = null;
     if (s !== void 0 && (E = "" + s), a.key !== void 0 && (E = "" + a.key), "key" in a) {
       s = {};
@@ -23,13 +23,13 @@ function re() {
     } else s = a;
     return a = s.ref, {
       $$typeof: c,
-      type: f,
+      type: m,
       key: E,
       ref: a !== void 0 ? a : null,
       props: s
     };
   }
-  return R.Fragment = d, R.jsx = i, R.jsxs = i, R;
+  return R.Fragment = f, R.jsx = i, R.jsxs = i, R;
 }
 var _ = {};
 /**
@@ -87,12 +87,12 @@ function te() {
         }
       return null;
     }
-    function d(e) {
+    function f(e) {
       return "" + e;
     }
     function i(e) {
       try {
-        d(e);
+        f(e);
         var r = !1;
       } catch {
         r = !0;
@@ -104,10 +104,10 @@ function te() {
           r,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           n
-        ), d(e);
+        ), f(e);
       }
     }
-    function f(e) {
+    function m(e) {
       if (e === p) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === g)
         return "<...>";
@@ -197,10 +197,10 @@ function te() {
         else w(o);
       if (h.call(r, "key")) {
         o = c(e);
-        var m = Object.keys(r).filter(function(K) {
+        var d = Object.keys(r).filter(function(K) {
           return K !== "key";
         });
-        n = 0 < m.length ? "{key: someKey, " + m.join(": ..., ") + ": ...}" : "{key: someKey}", $[o + n] || (m = 0 < m.length ? "{" + m.join(": ..., ") + ": ...}" : "{}", console.error(
+        n = 0 < d.length ? "{key: someKey, " + d.join(": ..., ") + ": ...}" : "{key: someKey}", I[o + n] || (d = 0 < d.length ? "{" + d.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -209,9 +209,9 @@ React keys must be passed directly to JSX without using spread:
   <%s key={someKey} {...props} />`,
           n,
           o,
-          m,
+          d,
           o
-        ), $[o + n] = !0);
+        ), I[o + n] = !0);
       }
       if (o = null, t !== void 0 && (i(t), o = "" + t), E(r) && (i(r.key), o = "" + r.key), "key" in r) {
         t = {};
@@ -246,7 +246,7 @@ React keys must be passed directly to JSX without using spread:
     var y, N = {}, C = v["react-stack-bottom-frame"].bind(
       v,
       s
-    )(), Y = O(f(s)), $ = {};
+    )(), Y = O(m(s)), I = {};
     _.Fragment = p, _.jsx = function(e, r, t, n, l) {
       var u = 1e4 > k.recentlyCreatedOwnerStacks++;
       return P(
@@ -257,7 +257,7 @@ React keys must be passed directly to JSX without using spread:
         n,
         l,
         u ? Error("react-stack-top-frame") : C,
-        u ? O(f(e)) : Y
+        u ? O(m(e)) : Y
       );
     }, _.jsxs = function(e, r, t, n, l) {
       var u = 1e4 > k.recentlyCreatedOwnerStacks++;
@@ -269,7 +269,7 @@ React keys must be passed directly to JSX without using spread:
         n,
         l,
         u ? Error("react-stack-top-frame") : C,
-        u ? O(f(e)) : Y
+        u ? O(m(e)) : Y
       );
     };
   }()), _;
@@ -280,16 +280,15 @@ function ne() {
 }
 var oe = ne();
 const se = ({
-  children: c,
-  onClick: d,
-  className: i = "",
-  disabled: f = !1
+  label: c,
+  onClick: f,
+  disabled: i = !1
 }) => /* @__PURE__ */ oe.jsx(
   "button",
   {
-    onClick: d,
-    className: `px-4 py-2 bg-blue-500 text-white rounded ${i}`,
-    disabled: f,
+    onClick: f,
+    className: "px-4 py-2 bg-blue-500 text-white rounded}",
+    disabled: i,
     children: c
   }
 );

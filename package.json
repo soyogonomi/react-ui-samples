@@ -1,6 +1,6 @@
 {
   "name": "@soyogonomi/react-ui-library-sample",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/react-ui-library-sample.umd.js",
   "module": "dist/react-ui-library-sample.es.js",
   "types": "dist/types/index.d.ts",

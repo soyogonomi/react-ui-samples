@@ -17,7 +17,7 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts", // エントリポイント
       name: "MyUiLibrary", // UMDビルド時のglobal変数名
-      fileName: (format) => `my-ui-library.${format}.js`,
+      fileName: (format) => `react-ui-components-sample.${format}.js`,
     },
     rollupOptions: {
       // React関連を外部化して、利用側でバンドルさせる
